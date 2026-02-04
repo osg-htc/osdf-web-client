@@ -14,7 +14,7 @@ import Analytics from "@/components/Analytics";
 export const metadata: Metadata = {
   title: "OSDF Object Browser",
   description: "Browse and interact with data stored in the Open Science Data Framework (OSDF).",
-	metadataBase: new URL(`https://${process.env.HOSTNAME}`),
+	metadataBase: new URL(`https://osdf-client.osg-htc.org`),
 };
 
 export default function RootLayout({
