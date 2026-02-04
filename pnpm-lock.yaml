@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@chtc/web-components':
-        specifier: ^1.0.15
-        version: 1.0.15(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^1.0.19
+        version: 1.0.19(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/cache':
         specifier: ^11.14.0
         version: 11.14.0
@@ -32,6 +32,9 @@ importers:
       '@next/bundle-analyzer':
         specifier: ^15.5.10
         version: 15.5.10
+      '@pelicanplatform/components':
+        specifier: ^1.0.5
+        version: 1.0.5(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@mui/material@7.3.7(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@socialgouv/matomo-next':
         specifier: ^1.11.0
         version: 1.11.0(next@16.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -120,8 +123,8 @@ packages:
     resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
 
-  '@chtc/web-components@1.0.15':
-    resolution: {integrity: sha512-YwQrZ8pNzQgrLlx6BdyTetUcuoabRAmmOc0ZYz0W5msAcpTpuoGrLrsqgILfzrGmoqegmWYqdxfm7icyxCcAHw==}
+  '@chtc/web-components@1.0.19':
+    resolution: {integrity: sha512-iCQ1nMaVDcJ3DAZU2atJtpFe7Pu2/4Mc0yaYwuIUZjtW0DS19rRd0aJedeOdT6Gau7/792H226NH/beY5kv0DA==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -590,6 +593,18 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
+
+  '@pelicanplatform/components@1.0.5':
+    resolution: {integrity: sha512-oXBbI0YzsrrQ7QsCbCW6dNF/aaGX2AX6H3hj4dIB29z8uvfV5tkPrkquU4m8O8AohyzD/hQvVd3xOJ5mSNvAhw==}
+    peerDependencies:
+      '@emotion/react': ^11.0.0
+      '@emotion/styled': ^11.0.0
+      '@mui/material': ^7.0.0
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  '@pelicanplatform/web-client@1.0.19':
+    resolution: {integrity: sha512-p90fNEzk2zyXRKXooiOVLkfupd7Nw49iHkk8POpTC2sLO+inQEC9ETttc7gHZWB8lqS3bDSug1vaiSqIULdhaw==}
 
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
@@ -2409,7 +2424,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@chtc/web-components@1.0.15(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@chtc/web-components@1.0.19(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0)
@@ -2859,6 +2874,20 @@ snapshots:
       fastq: 1.20.1
 
   '@nolyfill/is-core-module@1.0.39': {}
+
+  '@pelicanplatform/components@1.0.5(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@mui/material@7.3.7(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.1.0)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0)
+      '@mui/icons-material': 7.3.7(@mui/material@7.3.7(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.2.10)(react@19.1.0)
+      '@mui/material': 7.3.7(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react@19.1.0))(@types/react@19.2.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@pelicanplatform/web-client': 1.0.19
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@pelicanplatform/web-client@1.0.19': {}
 
   '@polka/url@1.0.0-next.29': {}
 

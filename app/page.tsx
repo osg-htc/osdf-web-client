@@ -1,13 +1,28 @@
-import { Box, Typography, Container } from "@mui/material";
+"use client";
 
-export default async function Home() {
+import { Box, Container } from "@mui/material";
+import React from "react";
+import Client from "@pelicanplatform/components";
+
+export default function HomePageClient() {
+
+  const [mounted, setMounted] =  React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
-      <Container maxWidth="md" sx={{ mt: 8 }}>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Hello World!
-        </Typography>
-      </Container>
-    </Box>
+    <Container maxWidth="lg">
+      <Box minHeight={"90vh"} margin={4} width={"100%"} maxWidth={"1000px"} mx={"auto"}>
+        {mounted &&
+            <Client
+                objectUrl={"pelican://osg-htc.org/ospool/ap40"}
+                enableAuth={true}
+            />
+        }
+      </Box>
+    </Container>
   );
 }
+

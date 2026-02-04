@@ -7,15 +7,15 @@ import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
 import {NavigationItem} from "@/components/Header";
 
-const Header = ({pages} : {pages: NavigationItem[]}) => {
+const Header = () => {
 	return (
 		<AppBar position="sticky" elevation={0}>
 			<Container maxWidth="lg">
 				<Box sx={{ display: { xs: 'block', md: 'none' } }}>
-					<MobileHeader pages={pages} />
+					<MobileHeader />
 				</Box>
 				<Box sx={{ display: { xs: 'none', md: 'block' } }}>
-					<DesktopHeader pages={pages} />
+					<DesktopHeader />
 				</Box>
 			</Container>
 		</AppBar>

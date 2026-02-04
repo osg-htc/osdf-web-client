@@ -19,8 +19,9 @@ import Link from "@mui/material/Link"
 
 import Title from "@/components/Header/Title";
 import {NavigationItem} from "@/components/Header";
+import Button from "@mui/material/Button";
 
-const MobileHeader = ({pages} : {pages: NavigationItem[]}) => {
+const MobileHeader = () => {
 
 	const [navOpen, setNavOpen] = useState(false)
 
@@ -66,9 +67,11 @@ const MobileHeader = ({pages} : {pages: NavigationItem[]}) => {
 								</IconButton>
 							</ListItem>
 						</Box>
-						{pages.map((page) => (
-							<MobileNavigationItem key={page.path + page.label} page={page} />
-						))}
+						<ListItem>
+              <Button href={"https://github.com/PelicanPlatform/web-client/issues/new"} color={'secondary'} variant="outlined">
+                Report Issue/Request Feature
+              </Button>
+            </ListItem>
 					</List>
 					<Divider />
 					<List>
