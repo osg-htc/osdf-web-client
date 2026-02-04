@@ -12,8 +12,8 @@ import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
-  title: "Website Template",
-  description: "Website template for CHTC projects",
+  title: "OSDF Object Browser",
+  description: "Browse and interact with data stored in the Open Science Data Framework (OSDF).",
 	metadataBase: new URL(`https://${process.env.HOSTNAME}`),
 };
 
