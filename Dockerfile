@@ -30,7 +30,7 @@ FROM nginx:alpine
 COPY --from=builder /app/out /usr/share/nginx/html
 
 # Copy custom nginx configuration (optional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
