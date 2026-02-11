@@ -25,7 +25,7 @@ export default function HomePageClient() {
           <Header />
           <Box component="main" sx={{ flex: 1 }}>
             <Container maxWidth="lg">
-              <Box minHeight={"90vh"} margin={{sm: 0, lg: 4}} width={"100%"} maxWidth={"1000px"} mx={"auto"}>
+              <Box minHeight={"90vh"} margin={{sm: 0, lg: 4}} pt={1} width={"100%"} maxWidth={"1000px"} mx={"auto"}>
                 {mounted && <AuthenticatedClient />}
               </Box>
             </Container>
