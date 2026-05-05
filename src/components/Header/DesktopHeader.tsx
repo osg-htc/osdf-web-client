@@ -8,7 +8,7 @@ import React from "react";
 
 import { usePelicanClient } from "@pelicanplatform/components";
 
-import Title from "@/components/Header/Title";
+import Title from "@/src/components/Header";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 

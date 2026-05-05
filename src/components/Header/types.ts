@@ -4,4 +4,3 @@ export type NavigationItem = {
   icon?: React.ReactNode;
   children?: NavigationItem[];
 };
-

@@ -7,8 +7,8 @@ import React from "react";
 import theme, {fonts} from "@chtc/web-components/themes/osg"
 import { AuthenticatedClient, PelicanClientProvider } from "@pelicanplatform/components";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/src/components/Header";
+import Footer from "@/src/components/Footer";
 
 export default function HomePageClient() {
 

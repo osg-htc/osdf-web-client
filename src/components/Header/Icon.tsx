@@ -1,5 +1,5 @@
-import ChtcIconWEBP from "@/public/logos/chtc.webp";
-import ChtcIconPNG from "@/public/logos/chtc.png";
+import ChtcIconWEBP from "@/src/public/logos/chtc.webp";
+import ChtcIconPNG from "@/src/public/logos/chtc.png";
 import React, {CSSProperties} from "react";
 
 const Icon = ({size = "50px"}: {size?: CSSProperties['width']}) => {

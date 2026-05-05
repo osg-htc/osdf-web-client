@@ -15,7 +15,7 @@ import CheckIcon from "@mui/icons-material/Check";
 
 import { usePelicanClient } from "@pelicanplatform/components";
 
-import Title from "@/components/Header/Title";
+import Title from "@/src/components/Header/Title";
 
 const MobileHeader = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
