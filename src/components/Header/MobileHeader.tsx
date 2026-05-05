@@ -9,37 +9,16 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { Storage, Close, DataObject } from "@mui/icons-material";
+import { Close, DataObject } from "@mui/icons-material";
 import Typography from "@mui/material/Typography";
 import CheckIcon from "@mui/icons-material/Check";
 
-import { usePelicanClient } from "@pelicanplatform/components";
 
 import Title from "@/src/components/Header/Title";
+import {HeaderProps} from "@/src/components/Header/types";
 
-const MobileHeader = () => {
+const MobileHeader = ({handleChange, collections, collection: selectedCollection }: HeaderProps) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const {
-    objectUrl,
-    setObjectUrl,
-    getObjectList
-  } = usePelicanClient();
-
-  const possibleCollections = [
-    {name: "AP40", value: "pelican://osg-htc.org/ospool/ap40"},
-    {name: "Collaborations", value: "pelican://osg-htc.org/ospool/uw-shared/collaborations"}
-  ];
-
-  const handleCollectionChange = (value: string) => {
-    setObjectUrl(value);
-    getObjectList(value);
-    setDrawerOpen(false);
-  };
-
-  const selectedCollection = possibleCollections.filter(collection => objectUrl.startsWith(collection.value))[0];
-
-  console.log(selectedCollection);
 
   return (
     <>
@@ -111,13 +90,13 @@ const MobileHeader = () => {
             </IconButton>
           </Box>
           <List>
-            {possibleCollections.map((collection) => {
-              const isSelected = objectUrl.startsWith(collection.value);
+            {collections.map((collection) => {
+              const isSelected = collection.prefix === selectedCollection.prefix;
               return (
-                <ListItem key={collection.value} disablePadding>
+                <ListItem key={collection.prefix} disablePadding>
                   <ListItemButton
                     selected={isSelected}
-                    onClick={() => handleCollectionChange(collection.value)}
+                    onClick={() => handleChange(collection)}
                   >
                     <ListItemText primary={collection.name} />
                     {isSelected && <CheckIcon color="primary" />}

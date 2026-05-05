@@ -20,7 +20,7 @@
     "@mui/material": "^7.3.10",
     "@mui/material-nextjs": "^7.3.10",
     "@next/bundle-analyzer": "^15.5.15",
-    "@pelicanplatform/components": "^1.1.0",
+    "@pelicanplatform/components": "^1.1.1",
     "@pelicanplatform/web-client": "^1.1.0",
     "next": "^16.2.4",
     "react": "19.1.0",

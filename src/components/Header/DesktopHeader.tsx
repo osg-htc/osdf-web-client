@@ -6,26 +6,12 @@ import IconButton from "@mui/material/IconButton";
 import Bug from "@mui/icons-material/BugReport";
 import React from "react";
 
-import { usePelicanClient } from "@pelicanplatform/components";
-
-import Title from "@/src/components/Header";
+import {HeaderProps} from "@/src/components/Header";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import Title from "@/src/components/Header/Title";
 
 
-const DesktopHeader = () => {
-
-  const {
-    objectUrl,
-    setObjectUrl,
-    getObjectList
-  } = usePelicanClient();
-
-  const possibleCollections = [
-    {name: "AP40", value: "pelican://osg-htc.org/ospool/ap40"},
-    {name: "Collaborations", value: "pelican://osg-htc.org/ospool/uw-shared/collaborations"}
-  ]
-
-  const currentCollection = possibleCollections.filter(x => objectUrl.startsWith(x.value))[0] || possibleCollections[0];
+const DesktopHeader = ({handleChange, collections, collection: selectedCollection }: HeaderProps) => {
 
 	return (
 		<Toolbar disableGutters>
@@ -49,16 +35,19 @@ const DesktopHeader = () => {
             <Select
               labelId="object-store-label"
               id="object-store"
-              value={currentCollection.value}
+              value={selectedCollection.prefix}
               label="Object Store"
-              onChange={(x) => {
-                setObjectUrl(x.target.value)
-                getObjectList(x.target.value);
+              onChange={(e) => {
+                const selectedPrefix = e.target.value;
+                const newCollection = collections.find((c) => c.prefix === selectedPrefix);
+                if(newCollection) {
+                  handleChange(newCollection)
+                }
               }}
               MenuProps={{style:{paddingBottom:0}}}
             >
-              {possibleCollections.map((collection) => (
-                <MenuItem key={collection.value} value={collection.value}>{collection.name}</MenuItem>
+              {collections.map((collection) => (
+                <MenuItem key={collection.prefix} value={collection.prefix}>{collection.name}</MenuItem>
               ))}
             </Select>
           </FormControl>

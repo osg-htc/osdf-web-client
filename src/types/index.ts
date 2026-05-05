@@ -28,3 +28,9 @@ export interface Namespace {
   origins: string[];
   caches: string[];
 }
+
+export interface Collection {
+  name: string;
+  prefix: string;
+  description?: string;
+}
