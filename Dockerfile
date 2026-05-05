@@ -7,15 +7,13 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 WORKDIR /app
 
 # Copy package files
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
 # Copy source code
-COPY app ./app
-COPY components ./components
-COPY public ./public
+COPY src ./src
 COPY next.config.mjs ./
 COPY next-sitemap.config.js ./
 COPY tsconfig.json ./
