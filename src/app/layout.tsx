@@ -6,6 +6,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import theme, {fonts} from "@chtc/web-components/themes/osg"
 
 import "./globals.css"
+import PelicanSwRegistrar from "@/src/components/PelicanSwRegistrar";
 
 export const metadata: Metadata = {
   title: "OSDF Object Browser",
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" className={fonts.map(font => font.className).join(' ')}>
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
+          <PelicanSwRegistrar />
           {children}
         </ThemeProvider>
       </AppRouterCacheProvider>
