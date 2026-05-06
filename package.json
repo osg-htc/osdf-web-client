@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "cp node_modules/@pelicanplatform/web-client/dist/serviceWorker/downloadServiceWorker.js src/public/downloadServiceWorker.js",
     "dev": "next dev --turbopack",
-    "prebuild": "cp node_modules/@pelicanplatform/web-client/dist/serviceWorker/downloadServiceWorker.js src/public/downloadServiceWorker.js",
+    "prebuild": "cp node_modules/@pelicanplatform/web-client/dist/serviceWorker/downloadServiceWorker.js public/downloadServiceWorker.js",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
