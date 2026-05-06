@@ -14,6 +14,7 @@ RUN pnpm install --frozen-lockfile
 
 # Copy source code
 COPY src ./src
+COPY public ./public
 COPY next.config.mjs ./
 COPY next-sitemap.config.js ./
 COPY tsconfig.json ./
