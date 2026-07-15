@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import {fetchFederation, list} from "@pelicanplatform/web-client";
-import { PelicanClientProvider } from "@pelicanplatform/components";
 
 import View from "./view"
 import {Namespace} from "@/src/types";
@@ -26,9 +25,7 @@ export default async function Page() {
   const defaultCollection = allCollections[0];
 
   return (
-    <PelicanClientProvider initialObjectUrl={`pelican://osg-htc.org${defaultCollection.prefix}`} enableAuth={true}>
-      <View collections={allCollections} defaultCollection={defaultCollection} />
-    </PelicanClientProvider>
+    <View collections={allCollections} defaultCollection={defaultCollection} />
   )
 }
 
