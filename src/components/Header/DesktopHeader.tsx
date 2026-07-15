@@ -7,11 +7,13 @@ import Bug from "@mui/icons-material/BugReport";
 import React from "react";
 
 import {HeaderProps} from "@/src/components/Header";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Box as MuiBox, FormControl, InputLabel, ListItemText, MenuItem, Select } from "@mui/material";
+import Star from "@mui/icons-material/Star";
+import StarBorder from "@mui/icons-material/StarBorder";
 import Title from "@/src/components/Header/Title";
 
 
-const DesktopHeader = ({handleChange, collections, collection: selectedCollection }: HeaderProps) => {
+const DesktopHeader = ({handleChange, collections, collection: selectedCollection, isStarred, onToggleStar }: HeaderProps) => {
 
 	return (
 		<Toolbar disableGutters>
@@ -45,10 +47,59 @@ const DesktopHeader = ({handleChange, collections, collection: selectedCollectio
                 }
               }}
               MenuProps={{style:{paddingBottom:0}}}
+              SelectDisplayProps={{
+                style: {
+                  display: "flex",
+                }
+              }}
             >
-              {collections.map((collection) => (
-                <MenuItem key={collection.prefix} value={collection.prefix}>{collection.name}</MenuItem>
-              ))}
+              {collections.map((collection) => {
+                const starred = isStarred(collection.prefix);
+                return (
+                  <MenuItem
+                    key={collection.prefix}
+                    value={collection.prefix}
+                    sx={{ pr: 1, display: 'flex', alignItems: 'center', flexWrap: 'nowrap' }}
+                  >
+                    <ListItemText
+                      sx={{ minWidth: 0, my: 0 }}
+                      slotProps={{ primary: { noWrap: true } }}
+                    >
+                      {collection.name}
+                    </ListItemText>
+                    <MuiBox
+                      component="span"
+                      role="button"
+                      aria-label={starred ? `Unstar ${collection.name}` : `Star ${collection.name}`}
+                      title={starred ? "Unstar" : "Star"}
+                      // Toggling the star must not select the store, so we swallow the
+                      // click/keydown before the Select's MenuItem handler sees it.
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onToggleStar(collection.prefix);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.stopPropagation();
+                          e.preventDefault();
+                          onToggleStar(collection.prefix);
+                        }
+                      }}
+                      tabIndex={0}
+                      sx={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        ml: 2,
+                        flexShrink: 0,
+                        color: starred ? 'warning.main' : 'action.active',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {starred ? <Star fontSize="small" /> : <StarBorder fontSize="small" />}
+                    </MuiBox>
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
           <IconButton href={"https://github.com/PelicanPlatform/web-client/issues/new"} color={'secondary'}>

@@ -12,12 +12,14 @@ import ListItemText from "@mui/material/ListItemText";
 import { Close, DataObject } from "@mui/icons-material";
 import Typography from "@mui/material/Typography";
 import CheckIcon from "@mui/icons-material/Check";
+import Star from "@mui/icons-material/Star";
+import StarBorder from "@mui/icons-material/StarBorder";
 
 
 import Title from "@/src/components/Header/Title";
 import {HeaderProps} from "@/src/components/Header/types";
 
-const MobileHeader = ({handleChange, collections, collection: selectedCollection }: HeaderProps) => {
+const MobileHeader = ({handleChange, collections, collection: selectedCollection, isStarred, onToggleStar }: HeaderProps) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -92,8 +94,22 @@ const MobileHeader = ({handleChange, collections, collection: selectedCollection
           <List>
             {collections.map((collection) => {
               const isSelected = collection.prefix === selectedCollection.prefix;
+              const starred = isStarred(collection.prefix);
               return (
-                <ListItem key={collection.prefix} disablePadding>
+                <ListItem
+                  key={collection.prefix}
+                  disablePadding
+                  secondaryAction={
+                    <IconButton
+                      edge="end"
+                      aria-label={starred ? `Unstar ${collection.name}` : `Star ${collection.name}`}
+                      onClick={() => onToggleStar(collection.prefix)}
+                      sx={{ color: starred ? 'warning.main' : 'action.active' }}
+                    >
+                      {starred ? <Star /> : <StarBorder />}
+                    </IconButton>
+                  }
+                >
                   <ListItemButton
                     selected={isSelected}
                     onClick={() => handleChange(collection)}

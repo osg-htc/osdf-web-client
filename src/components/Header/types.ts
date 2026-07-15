@@ -11,4 +11,6 @@ export interface HeaderProps {
   collection: Collection;
   collections: Collection[]
   handleChange: (x: Collection) => void
+  isStarred: (prefix: string) => boolean
+  onToggleStar: (prefix: string) => void
 }
