@@ -68,7 +68,7 @@ const getValidPublicNamespaces = async () => {
     publicNamespaces.map(async (ns: Namespace) => {
       try {
         const objectList = await list(`pelican://osg-htc.org${ns.path}`, federation);
-        return objectList.length > 0 ? ns : null;
+        return objectList.length > 1 ? ns : null;
       } catch (error) {
         return null;
       }
