@@ -18,3 +18,8 @@ overrides:
 allowBuilds:
   sharp: true
   unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - '@pelicanplatform/components@1.9.0'
+  - '@pelicanplatform/hooks@1.9.0'
+  - '@pelicanplatform/web-client@2.1.0'
