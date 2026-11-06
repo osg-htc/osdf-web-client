@@ -5,6 +5,7 @@ import React from "react";
 
 
 import { AuthenticatedClient, PelicanClientProvider, usePelicanClient } from "@pelicanplatform/components";
+import { parseOauthState } from "@pelicanplatform/web-client";
 
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
@@ -37,15 +38,19 @@ function HomePageContent({collections, defaultCollection}: Props) {
 
   const {hydrated, isStarred, toggleStar, addStar} = useStarredStores();
 
-  // Capture the ?url deep link exactly once, at first client render — before AuthenticatedClient
+  // Capture the deep link exactly once, at first client render — before AuthenticatedClient
   // mounts and starts mirroring objectUrl back into ?url. Re-reading window.location later would
   // see that mirrored value, making an empty landing look like a deep link to the default store.
+  // On an OAuth return the redirect carries no ?url; the URL the user logged in from travels in
+  // the OIDC state as objectUrl instead, so it takes priority.
   const initialUrlRef = React.useRef<string | null | undefined>(undefined);
   if (initialUrlRef.current === undefined) {
-    initialUrlRef.current =
-      typeof window !== "undefined"
-        ? new URLSearchParams(window.location.search).get("url")
-        : null;
+    if (typeof window === "undefined") {
+      initialUrlRef.current = null;
+    } else {
+      const url = new URL(window.location.href);
+      initialUrlRef.current = parseOauthState(url).objectUrl || url.searchParams.get("url");
+    }
   }
 
   // Given an object path, pick the longest configured prefix it sits under. Shared by the active
