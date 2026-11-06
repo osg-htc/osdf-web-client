@@ -6,8 +6,9 @@ import View from "./view"
 import {Namespace} from "@/src/types";
 
 const AUTHENTICATED_COLLECTIONS = [
-  {name: "AP40", prefix: "/ospool/ap40", description: "AP40"},
-  {name: "Collaborations", prefix: "/ospool/uw-shared/collaborations", description: "Shared data across multiple collaborations"},
+  {name: "/ospool/ap40", prefix: "/ospool/ap40", description: "AP40"},
+  {name: "/ospool/uw-shared/collaborations", prefix: "/ospool/uw-shared/collaborations", description: "Shared data across multiple collaborations"},
+  {name: '/osdf-tutorial', prefix: "/osdf-tutorial"}
 ]
 
 export default async function Page() {
