@@ -55,7 +55,7 @@ const MobileHeader = ({handleChange, collections, collection: selectedCollection
 
           <IconButton
             color="inherit"
-            aria-label="open object store menu"
+            aria-label="open namespace menu"
             edge="end"
             size={"small"}
           >
@@ -83,7 +83,7 @@ const MobileHeader = ({handleChange, collections, collection: selectedCollection
               color: 'primary.contrastText',
             }}
           >
-            <Typography variant="h6">Object Store</Typography>
+            <Typography variant="h6">Namespace</Typography>
             <IconButton
               onClick={() => setDrawerOpen(false)}
               sx={{ color: 'primary.contrastText' }}

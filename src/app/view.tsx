@@ -65,12 +65,14 @@ function HomePageContent({collections, defaultCollection}: Props) {
   // the first namespace resolves.
   const selectedCollection = matchCollection(objectPath) ?? defaultCollection;
 
-  // Starred stores float to the top of the list, keeping their relative order otherwise
-  // (Array.prototype.sort is stable). This is the order handed to the Header dropdowns.
+  // Starred namespaces float to the top of the list; within each group they are sorted by
+  // prefix. This is the order handed to the Header dropdowns.
   const orderedCollections = React.useMemo(
     () =>
       [...collections].sort(
-        (a, b) => (isStarred(a.prefix) ? 0 : 1) - (isStarred(b.prefix) ? 0 : 1)
+        (a, b) =>
+          (isStarred(a.prefix) ? 0 : 1) - (isStarred(b.prefix) ? 0 : 1) ||
+          a.prefix.localeCompare(b.prefix)
       ),
     [collections, isStarred]
   );
