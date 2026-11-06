@@ -8,7 +8,8 @@ import {Namespace} from "@/src/types";
 const AUTHENTICATED_COLLECTIONS = [
   {name: "/ospool/ap40", prefix: "/ospool/ap40", description: "AP40"},
   {name: "/ospool/uw-shared/collaborations", prefix: "/ospool/uw-shared/collaborations", description: "Shared data across multiple collaborations"},
-  {name: '/osdf-tutorial', prefix: "/osdf-tutorial"}
+  {name: '/osdf-tutorial', prefix: "/osdf-tutorial"},
+  {name: '/ndp/private', prefix: "/ndp/private"}
 ]
 
 export default async function Page() {

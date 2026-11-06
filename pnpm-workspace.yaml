@@ -16,10 +16,13 @@ overrides:
   yaml@>=1.0.0 <1.10.3: '>=1.10.3'
 
 allowBuilds:
-  sharp: true
-  unrs-resolver: true
+  sharp: false
+  unrs-resolver: false
 
 minimumReleaseAgeExclude:
   - '@pelicanplatform/components@1.9.0'
   - '@pelicanplatform/hooks@1.9.0'
   - '@pelicanplatform/web-client@2.1.0'
+  - '@pelicanplatform/components@1.9.1'
+  - '@pelicanplatform/hooks@1.9.1'
+  - '@pelicanplatform/web-client@2.1.1'

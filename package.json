@@ -16,26 +16,26 @@
     "pnpm": "^11"
   },
   "dependencies": {
-    "@chtc/web-components": "^1.0.23",
+    "@chtc/web-components": "^1.0.24",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.11",
     "@mui/material": "^7.3.11",
     "@mui/material-nextjs": "^7.3.10",
-    "@next/bundle-analyzer": "^15.5.19",
-    "@pelicanplatform/components": "^1.9.0",
-    "@pelicanplatform/web-client": "^2.1.0",
-    "next": "^16.2.9",
+    "@next/bundle-analyzer": "^15.5.29",
+    "@pelicanplatform/components": "^1.9.1",
+    "@pelicanplatform/web-client": "^2.1.1",
+    "next": "^16.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.5",
-    "@types/node": "^25.9.2",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.4",
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/node": "^25.9.9",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "15.4.6",
     "typescript": "^5.9.3"
   }
