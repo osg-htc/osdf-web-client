@@ -20,9 +20,6 @@ allowBuilds:
   unrs-resolver: false
 
 minimumReleaseAgeExclude:
-  - '@pelicanplatform/components@1.9.0'
-  - '@pelicanplatform/hooks@1.9.0'
-  - '@pelicanplatform/web-client@2.1.0'
-  - '@pelicanplatform/components@1.9.1'
-  - '@pelicanplatform/hooks@1.9.1'
-  - '@pelicanplatform/web-client@2.1.1'
+  - '@pelicanplatform/components'
+  - '@pelicanplatform/hooks'
+  - '@pelicanplatform/web-client'

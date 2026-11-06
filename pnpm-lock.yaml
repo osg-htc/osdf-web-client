@@ -50,8 +50,8 @@ importers:
         specifier: ^15.5.29
         version: 15.5.29
       '@pelicanplatform/components':
-        specifier: ^1.9.1
-        version: 1.9.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@mui/material@7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^1.9.2
+        version: 1.9.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@mui/material@7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@pelicanplatform/web-client':
         specifier: ^2.1.1
         version: 2.1.1
@@ -626,8 +626,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@pelicanplatform/components@1.9.1':
-    resolution: {integrity: sha512-dl1XAPDpQ82mPlrzWlsxPJUiWfAf6Cksq/gVq03dx6NxOWk/DArzP/6OmDaOJ/Tt8jW7Ww5IDVjZEBlboe92kA==}
+  '@pelicanplatform/components@1.9.2':
+    resolution: {integrity: sha512-4QaJrElpWhZafgt+vtf3vryRagx+rRbj+rd3Xnms3IPPtyk3Xdp0cbEnYeiP9NGWPSJqWMJzRB3mXXvYxrb7zg==}
     peerDependencies:
       '@emotion/react': ^11.0.0
       '@emotion/styled': ^11.0.0
@@ -635,8 +635,8 @@ packages:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@pelicanplatform/hooks@1.9.1':
-    resolution: {integrity: sha512-ATSwlLFWEUuPsC6OnBkoEboHm/5VzXi7e5TrhMMJRPI9UOJKKj+E7QCJZvh0luivGEzil0mgVcaE7Z4rDNOuMQ==}
+  '@pelicanplatform/hooks@1.9.2':
+    resolution: {integrity: sha512-7L9uQT2bRMwMyk8bB4ivBBOLxGyoLctFkrYyTew/vrc0TL9wssInS/aXQZhCUHyK/M+JluVPo5tjCptUL/IFiA==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -2929,13 +2929,13 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@pelicanplatform/components@1.9.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@mui/material@7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@pelicanplatform/components@1.9.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@mui/material@7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.3.0)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0)
       '@mui/icons-material': 7.3.11(@mui/material@7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.3.0)(react@19.1.0)
       '@mui/material': 7.3.11(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react@19.1.0))(@types/react@19.3.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@pelicanplatform/hooks': 1.9.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@pelicanplatform/hooks': 1.9.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@pelicanplatform/web-client': 2.1.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -2943,7 +2943,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@pelicanplatform/hooks@1.9.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@pelicanplatform/hooks@1.9.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@pelicanplatform/web-client': 2.1.1
       react: 19.1.0
